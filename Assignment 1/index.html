@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            background-color: blue;
+            color: cornsilk;
+        }
+        h2
+        {
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        h3
+        {
+            color: black;
+            font-style: italic;
+        }
+        * 
+        {
+            box-sizing: border-box;
+        }
+
+/* Create three equal columns that floats next to each other */
+        .column 
+        {
+            float: left;
+            width: 32%;
+            padding: 20px;
+            padding-left: 100px;
+            height: 550px; 
+            border: black;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after 
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        h3{
+            align-content: left;
+        }
+        .jack
+        {
+            
+            vertical-align: middle;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .abc
+        {
+            padding-left: 50px;
+            
+        }
+        .dis
+        {
+            border-color: darkslategray;
+            background-color: lightblue;
+        }
+        .cpr
+        {
+            border-color: lightcoral;
+            background-color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Profile</h1>
+
+    <div class="row" >
+        <div class="column" style="background-color: orange;border-color: darkred;" >
+            <div class="abc"><img src="JACK.png" alt="JACK" class="jack"></div>
+            <div class="abc"><h3>Abhishek Singh</h3></div>
+            <div class="abc"><h4>Trainee Software Engineer</h4></div>
+            <h3>Email: abhishek10singh1998@gmail.com</h3>
+            <h3>Number: 8108653847</h3>
+            <div class="abc"><h2>About Me</h2></div>
+            <p>This is a brief introduction</p>
+            <div class="abc"><h2>Certifications</h2></div>
+            <h3>Certificate 1</h3>
+            <h3>Certificate 2</h3>
+        </div>
+        
+        <div class="column" style="background-color: olive;">
+            <div class="abc"><h2>Employee Details</h2></div>
+            <h3>Employee Number: 14935</h3>
+            <h3>Service Line: TalentPool</h3>
+            <h3>Unit: Talent Management Trainee Pool</h3>
+            <h3>Cost Center: India</h3>
+            <h3>Area: Maharashtra</h3>
+            <h3>Sub Area: Mumbai</h3>
+            <h3>Grade: T2</h3>
+            <h3>Unit HR: N/A</h3>
+            <h3>Date of Joining: 19/05/2021</h3>
+        </div>
+        
+        <div class="column" style="background-color: gray;">
+            <div class="abc"><h2>Organization</h2></div>
+            <h3>Ashank Desai</h3>
+            <h3>Maninder Kapoor Puri</h3>
+            <h3>Girish Kulkarni</h3>
+            <h3>Joel J. Luis</h3>
+            <h3>Abhishek Singh</h3>
+        </div>
+      </div>
+
+      <br>
+      
+      <div class="row">
+        <div class="column" style="background-color: greenyellow;">
+            <div class="abc"><h2>Pesonal Information</h2></div>
+            <h3>Gender: Male</h3>
+            <h3>Birthday: 10/07/1998</h3>
+            <h3>Other Details</h3>
+            <h4>> Passport/Visa </h4>
+            <h4>Family Details</h4>
+        </div>
+        <div class="column" style="background-color: hotpink;">
+            <div class="abc"><h2>Contact Information</h2></div>
+            <h3>Personal Email: abhishek10singh1998@gmail.com</h3>
+            <h3>Contact Number: 8108653847</h3>
+            <h3>Address: Flat No.:405,B-Wing,New Shivam Residency,Opp. Mohan Greenwoo, near Manjarli gao, Badlapur(W) Thane, Mumbai, Maharashtra, India, 421503</h3>
+        </div>
+        <div class="column" style="background-color: indigo;">
+            <div class="abc"><h2>Emergency Details</h2></div>
+            <h3>Blood Group: B+</h3>
+            <h3>Emergency Contact Name: JitendraPratap Singh</h3>
+            <h3>Emergency Contact Number: 9594945271</h3>
+        </div>
+      </div>
+
+</body>
+<footer>
+    <div class="dis"><h3>Disclaimer</h3>
+    <p> Your privacy is important to us. Mastek uses the personal data provided by you on this form for the organizations internal processing requirement as part your employment. We will use your data for the organizations communication and notification. We will share your data with Mastek controlled affiliates and subsidiaries; with vendors working on our behalf; when required by law or to respond to legal process; to protect our customers ; to protect lives; to maintain the security of our services; and to protect the right of property or Mastek. Mastek is committed to protecting the security of your personal data. Mastek requests you to inform us about any changes to your personal data via an email to your respective Human Resource personal or by sending an email to PIIdatamodification@mastek.com .</p></div>
+    <div class="cpr"><span>&copy  Copyright 2016 - 2021. All rights reserved;</span></div>
+</footer>
+</html>
