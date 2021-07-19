@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <div class="flex">
+        <!--toggle button-->
+        <!--
+        <button type="button" data-toggle="tooltip" title="Menu Bar" id="sidebarCollapse" class="btn btn-info menubutton" onclick="openNav()">
+            <i class="fas fa-align-left"></i>
+        </button>
+        -->
+
+        <div class="mastekheader">
+            <!--toggle button end-->
+            <a href="https://mastekgroup.sharepoint.com/pages/default.aspx" target="_blank"><img src="data:image/png;base64,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"
+                    alt="Mastek logo" height="25px"></a>
+
+            <span class="searchbar">
+        <input type="text" placeholder="Search Everything" class="search ml-2 rounded" style="height: 35px;width: 480px;">
+        <i class="fas fa-search" style="margin-left: -35px;" data-toggle="tooltip" title="Search"></i></span>
+
+            <span class="topicons">
+            <i class="fa fa-bell-o fa-lg" aria-hidden="true" data-toggle="tooltip" title="No new notifications" style="margin-left: 20px;" ></i>
+            <i class="fa fa-calendar fa-lg" aria-hidden="true" data-toggle="tooltip" title="Calender"  style="margin-left: 10px"></i>
+            
+            <img id="flag" src="data:image/png;base64,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"
+             alt="Indian Flag" class="ml-2" data-toggle="tooltip" title="Flag" height="20px">
+            
+             <i class="fa fa-minus fa-rotate-90 fa-2x" aria-hidden="true" style="color: gray; margin-right: 150px;" ></i>
+             <!--<i class="fas fa-grip-lines-vertical ml-2"></i>-->
+            </span>
+
+            <span id="acc">
+           <span style="font-size: 14px; margin-right: 6px; "> Hi, Abhishek</span>
+            <i class="fa fa-user-o fa-lg" aria-hidden="true" data-toggle="tooltip" title="Signed In as" style="color: blue;"></i>
+
+            <i class="fas fa-caret-down"></i>
+
+            </span>
+        </div>
+
+    </div>
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="menubar">
+        <div class="submenu">
+            <button class="dropbtn">Applications 
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="submenu">
+            <button class="dropbtn">Corporate Functions
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="submenu">
+            <button class="dropbtn">Collaboration Portals
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="submenu">
+            <button class="dropbtn">External Links
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="submenu">
+            <button class="dropbtn">About Mastek
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="submenu">
+            <button class="dropbtn">Support
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="submenu-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</head>
+
+<body style=background-color:white>
+    <div class="header">
+        <h4 style="color: white; margin-top: 5px;">My Profile</h4>
+    </div>
+    <br><br><br>
+
+    <div class="righticons">
+        <button id="rb1" data-toggle="tooltip" title="Support" data-placement="left"><i class="fas fa-headphones-alt"></i></button><br>
+        <button id="rb2" data-toggle="tooltip" title="AppStore" data-placement="left"><i class="fas fa-shopping-basket"></i></button><br>
+        <button id="rb3" data-toggle="tooltip" title="Feedback" data-placement="left"><i class="far fa-smile"></i></button><br>
+        <button id="rb4" data-toggle="tooltip" title="Mastekeer Induction Guide" data-placement="left"> <i class="fas fa-info-circle"></i></button>
+    </div>
+
+    <div class="container" style="margin-top: -40px;">
+
+
+        <div class="disclaim">
+            <h6 style=" background-color: #d9edf7; color: 31708f; font-size: 12px; padding: 30px; border: 2px solid #bce8f1;">
+                <input type="checkbox" checked="checked"> By selecting the checkbox for personal information consent, you have agreed to share your personal information with Mastek Ltd. Read disclaimer given below.
+            </h6>
+        </div>
+
+
+    </div>
+
+    <div class="row " style="margin-left: 55px; ">
+        <div class="col1-lg">
+            <img src="images/abhishek.jpg " width="100px " height="100px " style="margin-block-start: -60px; border-radius: 50%;"><i class="fa fa-camera " aria-hidden="true " style="margin-left: -20px;color: gray; "></i>
+            <h3>Abhishek J.Singh</h3>
+            <p style="font-size:13px " ;> Trainee Software Engineer</p>
+            <p>
+                </i><i class="fa fa-envelope-o " aria-hidden="true" style="background-color: #e6e6e6; border-radius: unset;border:solid 0px #fff"></i>&nbsp;&nbsp;&nbsp;<a href="Abhishe14935@mastek.com "> Abhishe14935@mastek.com</a> </p>
+            <p style="margin-left: -60px; "><i class="fa fa-phone " aria-hidden="true " style="margin-left: -150px; "></i>&nbsp;&nbsp;&nbsp;
+                <a href="8108653847 "></a>
+            </p>
+            <p style="margin-left: -60px; "><i class="fa fa-mobile " aria-hidden="true " style="margin-left: -25px; "></i>&nbsp;&nbsp;&nbsp;<a href="8108653847 ">+91 8108653847</a></p>
+            <h6><i class="fa fa-user-circle-o " aria-hidden="true " style="margin-left: -120px; "></i>&nbsp;&nbsp;&nbsp;<strong>About Me : </strong></h6>
+
+            <p>This is a brief introduction</p>
+
+            <h6><i class="fa fa-graduation-cap " aria-hidden="true " style="margin-left: 15px; margin-block-start: 50px; "></i>&nbsp;&nbsp;&nbsp;<strong>Certifications</strong><i class="fa fa-plus-circle " aria-hidden="true " style="color: gray; margin-inline-start:
+            100px; "></i></h6>
+
+            <h6>Certificate 1</h6>
+            <h6>Certificate 2</h6>
+
+        </div>
+
+        <div class="col1-lg">
+
+            <h4><i class="fa fa-address-card-o " aria-hidden="true "></i>&nbsp;&nbsp;&nbsp; Employment Details</h4>
+            <hr>
+            <p style="margin-left: -200px; color: gray " ;>Employee No.</p>
+            <p style="margin-left: -250px; margin-top: -10px; ">14935</p>
+
+            <p style="margin-left: -210px; margin-top: -10px; color:gray " ;>Service Line</p>
+            <p style="margin-left: -90px; margin-top: -10px; ">SL_Apllication Development</p>
+
+            <p style="margin-left: -265px; margin-top: -10px; color:gray " ;>Unit</p>
+            <p style="margin-left: -10px; margin-top: -10px; ">CF - Talent Management Trainees Pool</p>
+
+            <p style="margin-left: -210px; margin-top: -10px; color:gray " ;>Cost Center</p>
+            <p style="margin-left: 7px; margin-top: -10px; ">CF-Talent Acquisition Mgmt-Trainees -MH</p>
+
+            <p style="margin-left: -260px; margin-top: -10px; color:gray " ;>Area</p>
+            <p style="margin-left: -230px; margin-top: -10px; ">Mumbai</p>
+
+            <p style="margin-left: -230px; margin-top: -10px; color:gray " ;>Sub-Area</p>
+            <p style="margin-left: -230px; margin-top: -10px; ">Mahape</p>
+
+            <p style="margin-left: -25px; margin-top: -10px; color: gray " ;>Grade &nbsp;&nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray;margin-inline-start: 200px; "></i></p>
+            <p style="margin-left: -270px; margin-top: -10px; ">T2</p>
+
+            <p style="margin-left: -22px; margin-top: -10px; color: gray " ;>Unit HR &nbsp;&nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray;margin-inline-start: 186px; "></i></p>
+            <p style="margin-left: -190px; margin-top: -10px; ">Not Available</p>
+
+            <p style="margin-left: -20px; margin-top: -10px; color: gray " ;>Date of Joining &nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray;margin-inline-start: 140px; "></i></p>
+            <p style="margin-left: -200px; margin-top: -10px; ">19/05/2021</p>
+
+
+        </div>
+
+
+        <div class="col1-lg">
+            <h4 style="font-style:unset; "><i class="fa fa-sitemap " aria-hidden="true " style="margin-left: -100px; "></i>&nbsp;&nbsp;&nbsp; Organization</h4>
+            <hr>
+
+            <!-- <p> <img src="images/ashank.jpg" class="imgphoto " width="30px " height="30px " style="margin-left: -120px; ">&nbsp;&nbsp;&nbsp;Ashanak Desai</p>
+            <p> <img src="images/maninder.jpg " class="imgphoto " width="45px " height="45px " style="margin-left:-110px ">&nbsp;Maninder Kapoor</p>
+            <p> <img src="images/girish.jpg " class="imgphoto " width="30px " height="30px " style="margin-left:-120px ">&nbsp;&nbsp;&nbsp;Girish Kulkarni</p>
+            <p> <img src="images/joell.jpg " class="imgphoto " width="30px " height="30px " style="margin-left:-160px ">&nbsp;&nbsp;&nbsp;Joel Luis</p>
+            <p> <img src="images/abhishek.jpg " class="imgphoto " width="30px " height="30px " style="margin-left:-110px ">&nbsp;&nbsp;&nbsp;Abhishek Singh</p> -->
+
+            <ul style="list-style-type:none;padding-left: 0%; text-align: left; margin-bottom: 10px;">
+                <li>
+                    <p><img class="imgphoto" src="images/ashank.jpg" alt="Ashank Desai">&nbsp;Ashank Desai </p>
+                </li>
+                <li>
+                    <p><img class="imgphoto" src="images/maninder.jpg" alt="Maninder Kapoor Puri">&nbsp;Maninder Kapoor Puri</p>
+                </li>
+                <li>
+                    <p><img class="imgphoto" src="images/girish.jpg" alt="Girish Kulkarni">&nbsp;Girish Kulkarni </p>
+                </li>
+                <li>
+                    <p><img class="imgphoto" src="images/joell.jpg" alt="Joel J.Luis">&nbsp;Joel J.Luis </p>
+                </li>
+                <li>
+                    <p><img class="imgphoto" src="images/abhishek.jpg" alt="Abhishek Singh">&nbsp;Abhishek Singh</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row " style="margin-left: 55px; ">
+        <div class="col2-lg">
+            <h4><i class="fa fa-info-circle " aria-hidden="true "></i>&nbsp;&nbsp;&nbsp;&nbsp; Personal Details&nbsp;&nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray; "></i></h4>
+            <hr>
+
+            <h6 style="color:gray; margin-left: -220px; ">Gender</h6>
+
+            <h6 style="margin-left: -235px; ">Male</h6>
+            <h6 style="color:gray; margin-left: -210px; ">Birthday</h6>
+            <h6 style="margin-left: -220px; ">10 July</h6>
+            <h6 style="color:gray; margin-left: -175px; ">Other Details</h6>
+            <ul>
+                <li>Passport / Visa Details</li><i class="fa fa-plus-circle " aria-hidden="true " style="color: gray; margin-inline-start: 100px; "></i>
+                <li>Family Details</li><i class="fa fa-plus-circle " aria-hidden="true " style="color: gray; margin-inline-start: 100px; "></i>
+            </ul>
+        </div>
+
+        <div class="col2-lg">
+            <h4><i class="fa fa-phone-square " aria-hidden="true "></i>&nbsp;&nbsp;&nbsp; Contact Information &nbsp;&nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray; "></i></h4>
+            <hr>
+            <h6 style="color:gray; margin-left: -175px; ">Personal Email Id</h6>
+            <em style="margin-left: -30px; "><a href="abhishek10singh1998@gmail.com "> abhishek10singh1998@gmail.com</a></em>
+            <h6 style="color:gray; margin-left: -195px; margin-top: 20px; ">Residence No</h6>
+            <p style="margin-left: -250px; ">405</p>
+            <h6 style="color:gray; margin-left: -180px; ">Current Address</h6>
+            <address style="margin-left: 15px; font-style: italic; ">Flat No. 405, B-Wing,
+                New Shivam Residency, near Manjarli Village,
+                Badlapur (W)
+            </address>
+        </div>
+
+        <div class="col1-lg">
+            <h4><i class="fa fa-ambulance " aria-hidden="true "></i>&nbsp;&nbsp;&nbsp; Emergency Details &nbsp;&nbsp;&nbsp;<i class="fa fa-lock " aria-hidden="true " style="color: gray; "></i></h4>
+            <hr>
+
+            <h6 style="margin-left: -200px; color: gray; "><span>Blood Group </span></h6>
+            <select id="BloodGroup " style="width: 50%; margin-left: -80px; ">
+            <option value="-1 ">--Select--</option>
+            <option value="O+ ">O+</option>
+            <option value="O- ">O-</option>
+            <option value="A+ ">A+</option>
+            <option value="A- ">A-</option>
+            <option value="B+ ">B+</option>
+            <option value="B- ">B-</option>
+            <option value="AB+ ">AB+</option>
+            <option value="AB- ">AB-</option>
+        </select> &nbsp;
+            <i class="fa fa-pencil " onclick="enableInput( 'BloodGroup') " data-toggle="tooltip " data-placement="bottom " data-original-title="Edit Blood Group "></i><i class="fa fa-save " style="display: none " onclick="saveInput( 'BloodGroup')
+            " data-toggle="tooltip " data-placement="bottom " data-original-title="Save Blood Group "></i>
+            </li>
+
+            <h6 style="color:gray; margin-left: -100px;margin-top: 10px; ">Emergency Contact Name</h6>
+            <h6 style="margin-left: -120px; ">JitendraPratap Singh</h6>
+            <h6 style="color:gray; margin-left: -80px;margin-top: 10px; ">Emergency Contact Number</h6>
+            <h6 style="margin-left: -180px; ">9930219675</h6>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="disclaim ">
+        <p style=" background-color: rgb(255, 218, 175); color: black; font-size: 16px; ">
+            <b> Disclaimer : </b>Your privacy is important to us. Mastek uses the personal data provided by you on this form for the organizations internal processing requirement as part your employment. We will use your data for the organizations communication
+            and notification. We will share your data with Mastek controlled affiliates and subsidiaries; with vendors working on our behalf; when required by law or to respond to legal process; to protect our customers ; to protect lives; to maintain
+            the security of our services; and to protect the right of property or Mastek. Mastek is committed to protecting the security of your personal data. Mastek requests you to inform us about any changes to your personal data via an email to your
+            respective Human Resource personal or by sending an email to PIIdatamodification@mastek.com .
+        </p>
+    </div>
+
+    <footer style="background-color: black; " align="center "><b>Copyright 2021 - All Rights Reserved</b></footer>
+    </div>
+
+</body>
+
+</html>

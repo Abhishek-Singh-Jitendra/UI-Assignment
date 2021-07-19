@@ -1,0 +1,131 @@
+.go1 {
+    text-align: left;
+}
+
+i.fa-bell {
+    font-size: 15px;
+}
+
+.row {
+    display: grid;
+    height: 780px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.row div {
+    background-color: white;
+    width: 350px;
+    height: 100%;
+    padding: 2px;
+    text-align: center;
+    border: solid black;
+    border-width: 1px;
+}
+
+.header {
+    padding: 5px;
+    text-align: center;
+    background-color: #304061;
+    color: white;
+    text-align: center;
+    margin-left: -960px;
+    font-size: 10px;
+}
+
+.mastekheader {
+    text-align: center;
+    margin-left: -30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.righticons {
+    position: fixed;
+    top: 32%;
+    right: 0px;
+    width: 115px;
+    height: 0px;
+    text-align: right;
+    z-index: 9999;
+    margin-top: -15px;
+}
+
+.imgphoto {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px;
+    vertical-align: middle;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menubar {
+    overflow: hidden;
+    background-color: white;
+    margin-left: 130px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.menubar a {
+    /*  float: left;*/
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.submenu {
+    float: left;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.submenu .dropbtn {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: whitesmoke;
+    font-family: inherit;
+    margin: 0;
+}
+
+.menubar a:hover,
+.submenu:hover .dropbtn {
+    background-color: darkblue;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.submenu-content a {
+    float: none;
+    color: black;
+    padding: 3px 3px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.submenu-content a:hover {
+    background-color: #ddd;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
